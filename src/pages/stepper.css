@@ -1,0 +1,96 @@
+.stepProgressBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.step {
+  text-align: center;
+  width: 20%;
+  position: relative;
+}
+
+.step-text {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.bullet {
+  border-radius: 90px;
+  border: 1px solid #000;
+  height: 20px;
+  width: 20px;
+  color: #000;
+  display: inline-block;
+  transition: background-color 500ms;
+  line-height: 20px;
+}
+
+.bullet.completed {
+  color: white;
+  background-color: #ff471a;
+
+}
+
+.bullet.completed::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  height: 1px;
+  background-color: #000;
+  margin-left: 7px;
+}
+
+.three-items .bullet.completed::after {
+  width: calc(200% - 22px);
+}
+
+.four-items .bullet.completed::after {
+  width: calc(133% - 22px);
+}
+
+.five-items .bullet.completed::after {
+  width: calc(100% - 22px);
+}
+
+.six-items .bullet.completed::after {
+  width: calc(100% - 22px);
+}
+
+
+/* Base styles and helper stuff */
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid black;
+  transition: 250ms background-color;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px;
+}
